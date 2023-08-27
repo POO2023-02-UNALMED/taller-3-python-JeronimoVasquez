@@ -50,7 +50,7 @@ class TV:
 
         if self.getEstado():
 
-            if volumen <= 7 and volumen >= 1:
+            if volumen <= 7 and volumen >= 0:
 
                 self._volumen = volumen
             else:
@@ -123,7 +123,7 @@ class TV:
 
         if self.getEstado():
 
-            if self.getVolumen() > 1:
+            if self.getVolumen() > 0:
                 self._volumen = self.getVolumen() - 1
             else: pass
 
