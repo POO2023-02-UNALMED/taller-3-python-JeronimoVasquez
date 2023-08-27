@@ -27,7 +27,7 @@ class TV:
 
         if self.getEstado():
 
-            if 150>=canal>=1:
+            if 120>=canal>=1:
 
                 self._canal = canal
             else:
@@ -50,7 +50,7 @@ class TV:
 
         if self.getEstado():
 
-            if 7>=volumen>=0:
+            if volumen <= 7 and volumen >= 1:
 
                 self._volumen = volumen
             else:
@@ -70,12 +70,12 @@ class TV:
         return self._control
     
     @classmethod
-    def getNumTv(self):
+    def getNumTV(self):
 
         return TV._numTV
     
     @classmethod
-    def setNumTv(self, numtv):
+    def setNumTV(self, numtv):
 
         TV._numTV = numtv
 
